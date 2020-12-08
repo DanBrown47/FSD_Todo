@@ -1,12 +1,6 @@
 $(document).ready(function() {
     'use strict';
-    $('#togglePwd[type="checkbox"]').click(function() {
-        if ($(this).prop("checked") == true) {
-            $('#inputPassword').prop("type", "text");
-        } else if ($(this).prop("checked") == false) {
-            $('#inputPassword').prop("type", "password");
-        }
-    });
+
 
     $("#login").click(function() {
         if ($("#inputEmail").val() === 'admin' && $("#inputPassword").val() === "12345") {
@@ -15,13 +9,22 @@ $(document).ready(function() {
             Swal.fire({
                 icon: 'error',
                 title: 'Authenication Failed',
-                text: 'Check your username/password'
+                text: 'Check your username/passw'
 
 
             })
         }
     });
 
+    $('#togglePwd[type="checkbox"]').click(function() {
+        if ($(this).prop("checked") == true) {
+            $('#inputPassword').prop("type", "text");
+        } else if ($(this).prop("checked") == false) {
+            $('#inputPassword').prop("type", "password");
+        }
+    });
+
+    // auto load triggering
     $("#getTodo").ready(() => {
         getTodoList();
     });
