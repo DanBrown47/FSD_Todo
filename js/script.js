@@ -9,7 +9,7 @@ $(document).ready(function() {
             Swal.fire({
                 icon: 'error',
                 title: 'Authenication Failed',
-                text: 'Check your username/passw'
+                text: 'Check your username/passwd'
 
 
             })
@@ -38,6 +38,7 @@ $(document).ready(function() {
     });
     // checkbox triggering using promise
     let count = 0;
+
     $("#todolist").on("change", ":checkbox", function() {
         var checked = this.checked;
         var promise = new Promise(function(resolve, reject) {
